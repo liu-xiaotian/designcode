@@ -16,7 +16,7 @@
 }
 
 .w {
-  width: 1234px;
+  max-width: 1234px;
   margin: 0 auto;
 }
 
@@ -61,4 +61,59 @@
   font-size: 15px;
   color: #fff;
   margin-left: 10px;
+}
+
+.modile-nav{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(15, 14, 71, 0.3);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+  backdrop-filter: blur(40px);
+  border-radius: 50%;
+}
+
+/* 导航栏响应式效果 */
+@media (max-width: 1024px){
+  .nav{
+    grid-template-columns: repeat(6, auto);
+  }
+
+  .nav a:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 900px){
+  .nav{
+    grid-template-columns: repeat(5, auto);
+  }
+
+  .nav a:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .nav{
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .nav a:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 550px){
+  .nav{
+    display: none;
+  }
+  .header{
+    padding-top: 20px;
+  }
+  .modile-nav{
+    display: flex;
+  }
 }
