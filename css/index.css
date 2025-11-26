@@ -197,3 +197,30 @@
   box-shadow: rgba(47, 184, 255, 0.3) 0px 10px 40px, rgb(47, 184, 255) 0px 0px 0px 1px inset;
   background: linear-gradient(rgba(24, 32, 79, 0.4) 0%, rgba(24, 32, 79, 0.25) 100%);
 }
+
+@media (max-width: 1280px) {
+  .course{
+    grid-template-columns: 1fr;
+  }
+
+  .course-l{
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 1024px){
+  .course-l{
+    min-width: 380px;
+    margin:auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px){
+  .course-r{
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+  }
+}
